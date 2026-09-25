@@ -1,0 +1,6 @@
+{
+  "name": "Computer Village - Laptops, Sales & Repairs",
+  "description": "Computer Village retail store dealing with laptops, computer sales, repairs, genuine chargers, and peripherals at Metcash Complex Room 104A.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
