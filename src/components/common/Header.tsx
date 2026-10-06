@@ -55,9 +55,9 @@ export const Header: React.FC = () => {
               <span><strong>Metcash Complex: Room 104A</strong> (Next to FNB ATM), Maseru</span>
             </span>
             <span className="text-slate-600 hidden sm:inline">|</span>
-            <span className="flex items-center gap-1 text-slate-400 hidden lg:flex">
-              <Clock className="w-3.5 h-3.5 text-slate-400" />
-              <span>Mon - Fri: 8:00 - 17:30 · Sat: 8:30 - 15:00</span>
+            <span className="flex items-center gap-1 text-slate-300 font-medium hidden md:flex">
+              <Clock className="w-3.5 h-3.5 text-sky-400" />
+              <span>Open Mon - Sat: 8:00 - 17:00</span>
             </span>
           </div>
 
@@ -102,8 +102,8 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Navigation Bar */}
-      <header className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-xs">
+      {/* Main Navigation Bar - Static in document flow across all devices */}
+      <header className="relative z-30 bg-white border-b border-slate-200 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             
@@ -177,6 +177,10 @@ export const Header: React.FC = () => {
         {/* Mobile Navigation Dropdown */}
         {mobileMenuOpen && (
           <div className="lg:hidden bg-slate-50 border-b border-slate-200 px-4 pt-3 pb-6 space-y-3">
+            <div className="flex items-center gap-2 py-1.5 px-3 bg-sky-50 border border-sky-200 rounded-lg text-xs font-semibold text-sky-800">
+              <Clock className="w-3.5 h-3.5 text-sky-600 shrink-0" />
+              <span>Open Mon - Sat: 8:00 - 17:00</span>
+            </div>
             <nav className="flex flex-col space-y-1.5 text-sm font-semibold text-slate-800">
               {navTabs.map((tab) => (
                 <a

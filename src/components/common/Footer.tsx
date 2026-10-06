@@ -6,15 +6,13 @@ import {
   Clock, 
   MessageSquareQuote, 
   ShieldCheck, 
-  Lock, 
-  Unlock, 
   Zap,
   Wrench
 } from 'lucide-react';
 import { useShop } from '../../context/ShopContext';
 
 export const Footer: React.FC = () => {
-  const { siteConfig, isAdmin, setAdminModalOpen, setFlyerLightboxOpen } = useShop();
+  const { siteConfig, setFlyerLightboxOpen } = useShop();
 
   return (
     <footer id="contact" className="bg-slate-900 border-t border-slate-800 text-slate-400 text-xs">
@@ -138,35 +136,22 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Bottom copyright and Admin Login */}
-        <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
-          <div>
-            © {new Date().getFullYear()} {siteConfig.companyLegalName}. All Rights Reserved. Metcash Complex Room 104A, Maseru, Lesotho.
+        {/* Bottom copyright and Developer Credit */}
+        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
+          <div className="space-y-1 text-center md:text-left">
+            <div>
+              © {new Date().getFullYear()} {siteConfig.companyLegalName}. All Rights Reserved. Metcash Complex Room 104A, Maseru, Lesotho.
+            </div>
+            <div className="text-slate-400">
+              Site developed by <span className="text-sky-400 font-semibold">"Motlohi Lethoko"</span> <span className="text-slate-300 font-medium">BSc IT Qualified</span>
+            </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <a href="#flyer-section" className="hover:text-slate-300">Home</a>
-            <a href="#catalog" className="hover:text-slate-300">Laptops</a>
-            <a href="#repairs" className="hover:text-slate-300">Repairs</a>
-            <a href="#chargers" className="hover:text-slate-300">Chargers</a>
-            <span className="text-slate-700">|</span>
-            {isAdmin ? (
-              <button
-                onClick={() => setAdminModalOpen(true)}
-                className="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1 cursor-pointer"
-              >
-                <Unlock className="w-3 h-3" />
-                <span>Admin Portal</span>
-              </button>
-            ) : (
-              <button
-                onClick={() => setAdminModalOpen(true)}
-                className="text-slate-400 hover:text-slate-200 flex items-center gap-1 cursor-pointer"
-              >
-                <Lock className="w-3 h-3" />
-                <span>Staff Login</span>
-              </button>
-            )}
+          <div className="flex items-center gap-4 text-slate-400">
+            <a href="#flyer-section" className="hover:text-slate-200 transition-colors">Home</a>
+            <a href="#catalog" className="hover:text-slate-200 transition-colors">Laptops</a>
+            <a href="#repairs" className="hover:text-slate-200 transition-colors">Repairs</a>
+            <a href="#chargers" className="hover:text-slate-200 transition-colors">Chargers</a>
           </div>
         </div>
 

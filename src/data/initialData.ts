@@ -10,7 +10,7 @@ export const INITIAL_SITE_CONFIG: SiteConfig = {
   phones: ["+266 57637545", "+266 57402325"],
   whatsappNumbers: ["+26657637545", "+26657402325"],
   email: "sales@computervillage.co.ls",
-  businessHours: "Mon - Fri: 8:00 AM - 5:30 PM | Sat: 8:30 AM - 3:00 PM",
+  businessHours: "Open Mon - Sat: 8:00 - 17:00",
   flyerImageUrl: "/assets/images/computer_village_flyer.jpg",
   flyerHeadline: "GET THE BEST LAPTOP FOR WORK & STUDY",
   flyerSubheadline: "Digital Technology · 8th to 13th Generation · Insured Fast Repairs",

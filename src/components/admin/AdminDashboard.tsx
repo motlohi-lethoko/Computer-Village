@@ -12,7 +12,6 @@ import {
   XCircle, 
   Wrench, 
   Image as ImageIcon, 
-  Video, 
   RefreshCw, 
   Download, 
   LogOut,
@@ -79,6 +78,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   const [isUploadingFlyer, setIsUploadingFlyer] = useState(false);
   const [flyerUrlInput, setFlyerUrlInput] = useState('');
   const [uploadError, setUploadError] = useState('');
+  const [isSavingConfig, setIsSavingConfig] = useState(false);
 
   if (!isOpen) return null;
 
@@ -102,8 +102,6 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     setEditingPriceId(prod.id);
     setTempPrice(prod.price.toString());
   };
-
-  const [isSavingConfig, setIsSavingConfig] = useState(false);
 
   const handleSavePriceEdit = (id: string) => {
     const val = parseFloat(tempPrice);
@@ -165,7 +163,6 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       siteConfig,
       products,
       repairBookings,
-      storeVideos,
       exportDate: new Date().toISOString()
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
@@ -269,18 +266,6 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
           >
             <Wrench className="w-4 h-4" />
             <span>Repair Orders ({repairBookings.length})</span>
-          </button>
-
-          <button
-            onClick={() => setActiveTab('videos')}
-            className={`py-3 px-4 text-xs font-bold border-b-2 transition-colors flex items-center gap-2 cursor-pointer ${
-              activeTab === 'videos'
-                ? 'border-blue-700 text-blue-700 bg-white'
-                : 'border-transparent text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <Video className="w-4 h-4" />
-            <span>Store Videos ({storeVideos.length})</span>
           </button>
 
           <button
@@ -809,44 +794,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             </div>
           )}
 
-          {/* TAB 4: STORE VIDEOS */}
-          {activeTab === 'videos' && (
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-base font-bold text-slate-900">
-                    Store Tour & Stock Videos
-                  </h3>
-                  <p className="text-xs text-slate-600">
-                    Upload new store floor videos or technician workbench walkthroughs.
-                  </p>
-                </div>
-
-                <button
-                  onClick={onOpenVideoUpload}
-                  className="px-3.5 py-2 rounded-lg bg-blue-700 hover:bg-blue-800 text-white text-xs font-bold transition-colors cursor-pointer"
-                >
-                  + Upload Video
-                </button>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {storeVideos.map(vid => (
-                  <div key={vid.id} className="bg-white border border-slate-200 rounded-xl p-4 space-y-3">
-                    <div className="aspect-video bg-black rounded-lg overflow-hidden border border-slate-200">
-                      <video src={vid.videoUrl} controls className="w-full h-full object-contain" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-slate-900">{vid.title}</h4>
-                      <p className="text-xs text-slate-600 mt-0.5">{vid.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* TAB 5: BACKUP & RESTORE */}
+          {/* TAB 4: BACKUP & RESTORE */}
           {activeTab === 'settings' && (
             <div className="space-y-6 max-w-xl">
               <div>

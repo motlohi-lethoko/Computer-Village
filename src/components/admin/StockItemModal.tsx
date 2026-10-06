@@ -189,7 +189,7 @@ export const StockItemModal: React.FC<StockItemModalProps> = ({
                 {isEditing ? `Edit Stock Item: ${productToEdit?.title}` : 'Add New Inventory Item'}
               </h3>
               <p className="text-xs text-slate-500">
-                Update prices, specs, photos, video demos, and stock availability
+                Update prices, specs, photos, and stock availability
               </p>
             </div>
           </div>
@@ -463,86 +463,44 @@ export const StockItemModal: React.FC<StockItemModalProps> = ({
             </div>
           </div>
 
-          {/* Photos & Video Demonstration Upload */}
+          {/* Photos Upload */}
           <div className="space-y-4 pt-4 border-t border-slate-200">
-            <h4 className="text-xs font-bold text-blue-700 uppercase tracking-wider">
-              3. Product Photos & Video Demo
+            <h4 className="text-xs font-bold text-sky-700 uppercase tracking-wider flex items-center gap-1.5">
+              <ImageIcon className="w-3.5 h-3.5" />
+              <span>3. Product Photo</span>
             </h4>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              
-              {/* Product Photo */}
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3">
-                <span className="text-xs font-semibold text-slate-700 block">
-                  Product Image
-                </span>
-                
-                <div className="aspect-[4/3] bg-white rounded-lg border border-slate-200 overflow-hidden flex items-center justify-center">
+            <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center">
+                {/* Photo Preview */}
+                <div className="aspect-[4/3] bg-white rounded-lg border border-slate-200 overflow-hidden flex items-center justify-center max-w-[220px]">
                   <img src={image} alt="Preview" className="w-full h-full object-cover" />
                 </div>
 
-                <div>
-                  <label className="block text-[11px] text-slate-500 mb-1">Upload Photo from device:</label>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={handleImageUpload}
-                    disabled={isUploadingMedia}
-                    className="block w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2.5 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer"
-                  />
-                </div>
+                <div className="sm:col-span-2 space-y-3">
+                  <div>
+                    <label className="block text-[11px] font-medium text-slate-600 mb-1">Upload Photo from device:</label>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={handleImageUpload}
+                      disabled={isUploadingMedia}
+                      className="block w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2.5 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-sky-50 file:text-sky-700 hover:file:bg-sky-100 cursor-pointer"
+                    />
+                  </div>
 
-                <div>
-                  <label className="block text-[11px] text-slate-500 mb-1">Or paste image URL:</label>
-                  <input
-                    type="text"
-                    value={image}
-                    onChange={(e) => setImage(e.target.value)}
-                    className="w-full bg-white border border-slate-300 rounded px-2.5 py-1 text-xs text-slate-900 focus:outline-none focus:border-blue-600"
-                  />
-                </div>
-              </div>
-
-              {/* Product Video Demo */}
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3">
-                <span className="text-xs font-semibold text-slate-700 block">
-                  Video Demonstration (Optional)
-                </span>
-
-                <div className="aspect-[4/3] bg-white rounded-lg border border-slate-200 overflow-hidden flex items-center justify-center">
-                  {videoUrl ? (
-                    <video src={videoUrl} controls className="w-full h-full object-contain" />
-                  ) : (
-                    <div className="text-center p-4 text-slate-400 space-y-1">
-                      <Video className="w-8 h-8 mx-auto text-slate-300" />
-                      <p className="text-[11px]">No video attached yet</p>
-                    </div>
-                  )}
-                </div>
-
-                <div>
-                  <label className="block text-[11px] text-slate-500 mb-1">Upload Video clip (MP4 / WebM):</label>
-                  <input
-                    type="file"
-                    accept="video/*"
-                    onChange={handleVideoUpload}
-                    disabled={isUploadingMedia}
-                    className="block w-full text-xs text-slate-500 file:mr-2 file:py-1 file:px-2.5 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-[11px] text-slate-500 mb-1">Or paste video URL:</label>
-                  <input
-                    type="text"
-                    placeholder="https://..."
-                    value={videoUrl}
-                    onChange={(e) => setVideoUrl(e.target.value)}
-                    className="w-full bg-white border border-slate-300 rounded px-2.5 py-1 text-xs text-slate-900 focus:outline-none focus:border-blue-600"
-                  />
+                  <div>
+                    <label className="block text-[11px] font-medium text-slate-600 mb-1">Or paste image URL:</label>
+                    <input
+                      type="text"
+                      value={image}
+                      onChange={(e) => setImage(e.target.value)}
+                      placeholder="https://..."
+                      className="w-full bg-white border border-slate-300 rounded px-2.5 py-1 text-xs text-slate-900 focus:outline-none focus:border-sky-500"
+                    />
+                  </div>
                 </div>
               </div>
-
             </div>
           </div>
 
