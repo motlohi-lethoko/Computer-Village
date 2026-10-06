@@ -72,7 +72,7 @@ export const ProductDetailModal: React.FC = () => {
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     const target = e.currentTarget;
-                    target.src = '/assets/images/laptops_showcase_row_1790265301779.jpg';
+                    target.src = './assets/images/laptops_showcase_row_1790265301779.jpg';
                   }}
                 />
               </div>

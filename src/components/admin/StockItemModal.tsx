@@ -50,7 +50,7 @@ export const StockItemModal: React.FC<StockItemModalProps> = ({
   const [tipType, setTipType] = useState('');
 
   // Media
-  const [image, setImage] = useState('/assets/images/laptops_showcase_row_1790265301779.jpg');
+  const [image, setImage] = useState('./assets/images/laptops_showcase_row_1790265301779.jpg');
   const [isUploadingMedia, setIsUploadingMedia] = useState(false);
   const [uploadMessage, setUploadMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -97,7 +97,7 @@ export const StockItemModal: React.FC<StockItemModalProps> = ({
       setWarranty('6 Months Warranty');
       setVoltage('');
       setTipType('');
-      setImage('/assets/images/laptops_showcase_row_1790265301779.jpg');
+      setImage('./assets/images/laptops_showcase_row_1790265301779.jpg');
     }
   }, [productToEdit, isOpen]);
 

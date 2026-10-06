@@ -11,7 +11,7 @@ export const INITIAL_SITE_CONFIG: SiteConfig = {
   whatsappNumbers: ["+26657637545", "+26657402325"],
   email: "sales@computervillage.co.ls",
   businessHours: "Open Mon - Sat: 8:00 - 17:00",
-  flyerImageUrl: "/assets/images/computer_village_flyer.jpg",
+  flyerImageUrl: "./assets/images/computer_village_flyer.jpg",
   flyerHeadline: "GET THE BEST LAPTOP FOR WORK & STUDY",
   flyerSubheadline: "Digital Technology · 8th to 13th Generation · Insured Fast Repairs",
   bannerNotice: "🔥 SPECIAL OFFER: Up to 40% OFF Diagnostics for new clients & Genuine Chargers from M300!"
@@ -36,7 +36,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       screenSize: "15.6 inch FHD",
       warranty: "6 Months Warranty"
     },
-    image: "/assets/images/laptops_showcase_row_1790265301779.jpg",
+    image: "./assets/images/laptops_showcase_row_1790265301779.jpg",
     description: "High speed Lenovo laptop powered by AMD Ryzen 7 processor with 512GB NVMe SSD. Ultra-fast boot times, full numeric keypad, ideal for serious engineering, programming, and multitasking.",
     dateAdded: "2026-09-20"
   },
@@ -58,7 +58,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       screenSize: "14 inch HD Anti-Glare",
       warranty: "6 Months Warranty"
     },
-    image: "/assets/images/laptops_showcase_row_1790265301779.jpg",
+    image: "./assets/images/laptops_showcase_row_1790265301779.jpg",
     description: "Legendary military-grade ThinkPad durability with TrackPoint, spill-resistant keyboard, 256GB solid-state drive, and all-day battery life for corporate and field work.",
     dateAdded: "2026-09-20"
   },
@@ -80,7 +80,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       screenSize: "15.6 inch Narrow Bezel",
       warranty: "6 Months Warranty"
     },
-    image: "/assets/images/laptops_showcase_row_1790265301779.jpg",
+    image: "./assets/images/laptops_showcase_row_1790265301779.jpg",
     description: "Modern Dell 11th Generation Core i5 laptop with crystal clear display, fast SSD, and Windows 11 Pro. Perfect for university coursework and office operations.",
     dateAdded: "2026-09-21"
   },
@@ -102,7 +102,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       screenSize: "15.6 inch Display",
       warranty: "6 Months Warranty"
     },
-    image: "/assets/images/laptops_showcase_row_1790265301779.jpg",
+    image: "./assets/images/laptops_showcase_row_1790265301779.jpg",
     description: "Heavy duty multitasking with 12GB RAM and 11th Gen Core i7 power. Fast response time for heavy spreadsheets, graphic design, and video editing.",
     dateAdded: "2026-09-21"
   },
@@ -122,7 +122,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       screenSize: "14 inch Display",
       warranty: "6 Months Warranty"
     },
-    image: "/assets/images/laptops_showcase_row_1790265301779.jpg",
+    image: "./assets/images/laptops_showcase_row_1790265301779.jpg",
     description: "Robust Dell laptop configured with a massive 16GB RAM upgrade and 256GB SSD for ultra-smooth app switching and office work.",
     dateAdded: "2026-09-22"
   },
@@ -144,7 +144,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       screenSize: "15.6 inch Slim",
       warranty: "1 Year Official Warranty"
     },
-    image: "/assets/images/laptops_showcase_row_1790265301779.jpg",
+    image: "./assets/images/laptops_showcase_row_1790265301779.jpg",
     description: "Factory brand new ASUS laptop with sealed retail box. Sleek modern chassis, vibrant screen, high-efficiency processor, and 256GB SSD storage.",
     dateAdded: "2026-09-22"
   },
@@ -164,7 +164,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       screenSize: "14 inch HD",
       warranty: "3 Months Warranty"
     },
-    image: "/assets/images/laptops_showcase_row_1790265301779.jpg",
+    image: "./assets/images/laptops_showcase_row_1790265301779.jpg",
     description: "Affordable, dependable student laptop for web browsing, homework, Zoom meetings, and document typing. Only M3,000.00.",
     dateAdded: "2026-09-23"
   },
@@ -184,7 +184,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       screenSize: "15.6 inch LED",
       warranty: "6 Months Warranty"
     },
-    image: "/assets/images/laptops_showcase_row_1790265301779.jpg",
+    image: "./assets/images/laptops_showcase_row_1790265301779.jpg",
     description: "Acer 15.6-inch laptop with Core i5 processor, 8GB RAM, and 500GB storage. Full numeric keyboard and HDMI port for external monitors.",
     dateAdded: "2026-09-23"
   },
@@ -205,7 +205,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       os: "Windows 11 Pro",
       warranty: "6 Months Warranty"
     },
-    image: "/assets/images/laptop_chargers_stock_1790265213531.jpg",
+    image: "./assets/images/laptop_chargers_stock_1790265213531.jpg",
     description: "Heavy-duty commercial Dell OptiPlex desktop tower (shrink-wrapped in warehouse stock). Quiet cooling, multiple USB 3.0 ports, built for continuous office uptime.",
     dateAdded: "2026-09-22"
   },
@@ -224,7 +224,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       os: "Windows 11 Pro",
       warranty: "6 Months Warranty"
     },
-    image: "/assets/images/laptop_chargers_stock_1790265213531.jpg",
+    image: "./assets/images/laptop_chargers_stock_1790265213531.jpg",
     description: "Reliable Dell desktop PC workstation tower with 8GB RAM and Windows 11 Pro. Excellent for shops, accounting systems, schools, and offices.",
     dateAdded: "2026-09-22"
   },
@@ -244,7 +244,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       printSpeed: "22 pages per minute",
       resolution: "1200 x 1200 dpi"
     },
-    image: "/assets/images/laser_printer_retail_1790265318004.jpg",
+    image: "./assets/images/laser_printer_retail_1790265318004.jpg",
     description: "Compact desktop monochrome laser printer. Ultra-low cost per page, crisp sharp text printing, metal chassis for rugged durability.",
     dateAdded: "2026-09-23"
   },
@@ -264,7 +264,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       cartridges: "Canon PG-445 & CL-446",
       functions: "Print, Copy, Flatbed Color Scanner"
     },
-    image: "/assets/images/laser_printer_retail_1790265318004.jpg",
+    image: "./assets/images/laser_printer_retail_1790265318004.jpg",
     description: "Affordable home and small-office all-in-one printer with high resolution flatbed color scanning, xerox photocopying, and color document printing.",
     dateAdded: "2026-09-23"
   },
@@ -284,7 +284,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       warranty: "Replacement Guarantee",
       power: "65W / 90W"
     },
-    image: "/assets/images/laptop_chargers_stock_1790265213531.jpg",
+    image: "./assets/images/laptop_chargers_stock_1790265213531.jpg",
     description: "Original quality high-output laptop power adapter. Over-voltage, short-circuit, and heat protection. In stock for Dell, HP, Lenovo, Toshiba, Acer.",
     dateAdded: "2026-09-23"
   },
@@ -304,7 +304,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       power: "65W Power Delivery",
       warranty: "Replacement Guarantee"
     },
-    image: "/assets/images/laptop_chargers_stock_1790265213531.jpg",
+    image: "./assets/images/laptop_chargers_stock_1790265213531.jpg",
     description: "Original Type-C 65W fast charger suitable for modern HP, Dell, Lenovo ThinkPad, Apple MacBook, ASUS, and Acer laptops.",
     dateAdded: "2026-09-23"
   },
@@ -322,7 +322,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       warranty: "6 Months Warranty",
       compatibility: "Dell, HP, Lenovo, Acer, Toshiba"
     },
-    image: "/assets/images/laptop_chargers_stock_1790265213531.jpg",
+    image: "./assets/images/laptop_chargers_stock_1790265213531.jpg",
     description: "High capacity grade A replacement laptop batteries with certified cells. Restores your laptop to 3 to 6 hours of dependable battery runtime.",
     dateAdded: "2026-09-23"
   },
@@ -340,7 +340,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       compartments: "5 Bill / 8 Coin Trays",
       warranty: "1 Year Warranty"
     },
-    image: "/assets/images/laser_printer_retail_1790265318004.jpg",
+    image: "./assets/images/laser_printer_retail_1790265318004.jpg",
     description: "Robust retail POS cash drawer with 3-position lock (manual open, electrically driven by receipt printer, or locked shut). Essential for shops and supermarkets.",
     dateAdded: "2026-09-23"
   },
@@ -358,7 +358,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       ports: "4x Gigabit Ethernet LAN/WAN",
       warranty: "1 Year Warranty"
     },
-    image: "/assets/images/laser_printer_retail_1790265318004.jpg",
+    image: "./assets/images/laser_printer_retail_1790265318004.jpg",
     description: "Next-gen Wi-Fi 6 router providing wide coverage, wall penetration, low latency gaming, and support for up to 64 simultaneous devices.",
     dateAdded: "2026-09-23"
   },
@@ -376,7 +376,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       cable: "Braided Anti-Tangle Cable with Volume Control",
       lighting: "RGB Glow LED"
     },
-    image: "/assets/images/laptop_chargers_stock_1790265213531.jpg",
+    image: "./assets/images/laptop_chargers_stock_1790265213531.jpg",
     description: "Over-ear cushioned gaming headset with crystal clear audio for calls, online lectures, music, and competitive PC gaming.",
     dateAdded: "2026-09-23"
   },
@@ -393,7 +393,7 @@ export const INITIAL_PRODUCTS: Product[] = [
       resolution: "HD / FHD Slim & Standard 30-pin / 40-pin",
       installation: "Free or low-cost fitting in-store"
     },
-    image: "/assets/images/laptop_repairs_banner_1790265197225.jpg",
+    image: "./assets/images/laptop_repairs_banner_1790265197225.jpg",
     description: "Factory brand new replacement LCD/LED laptop screens with no dead pixels. Immediate in-store installation by Computer Village technicians.",
     dateAdded: "2026-09-23"
   }
@@ -479,7 +479,7 @@ export const INITIAL_VIDEOS: StoreVideo[] = [
     title: "Computer Village Shop Tour & Shelves Overview",
     description: "Live walkthrough of our Metcash Complex shop floor showing stocked routers (EB-Link, 4G LTE), Nesty headsets, Pantum laser printers, PC towers and laptop screens.",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    thumbnail: "/assets/images/computer_village_flyer.jpg",
+    thumbnail: "./assets/images/computer_village_flyer.jpg",
     duration: "0:32",
     category: "Store Walkthrough",
     dateAdded: "2026-09-24"
@@ -489,7 +489,7 @@ export const INITIAL_VIDEOS: StoreVideo[] = [
     title: "Laptop Motherboard Repair & Diagnostic Bench",
     description: "Watch our technician diagnosing power rail failure on an HP Core i7 laptop using digital multimeter and regulated bench power supply.",
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-    thumbnail: "/assets/images/laptop_repairs_banner_1790265197225.jpg",
+    thumbnail: "./assets/images/laptop_repairs_banner_1790265197225.jpg",
     duration: "0:45",
     category: "Repair Demo",
     dateAdded: "2026-09-24"

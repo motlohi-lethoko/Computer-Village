@@ -70,11 +70,23 @@ const LOCAL_STORAGE_VIDEOS = 'cv_videos_v1';
 const LOCAL_STORAGE_BOOKINGS = 'cv_bookings_v1';
 const LOCAL_STORAGE_ADMIN_AUTH = 'cv_admin_auth_v1';
 
+const sanitizeRelativeAsset = (path?: string): string => {
+  if (!path) return '';
+  if (path.startsWith('/assets/')) {
+    return '.' + path;
+  }
+  return path;
+};
+
 export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [products, setProducts] = useState<Product[]>(() => {
     try {
       const saved = localStorage.getItem(LOCAL_STORAGE_PRODUCTS);
-      return saved ? JSON.parse(saved) : INITIAL_PRODUCTS;
+      const list: Product[] = saved ? JSON.parse(saved) : INITIAL_PRODUCTS;
+      return list.map(p => ({
+        ...p,
+        image: sanitizeRelativeAsset(p.image)
+      }));
     } catch {
       return INITIAL_PRODUCTS;
     }
@@ -88,7 +100,11 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
         if (!parsed.flyerImageUrl || parsed.flyerImageUrl.includes('1790265181051')) {
           parsed.flyerImageUrl = INITIAL_SITE_CONFIG.flyerImageUrl;
         }
-        return { ...INITIAL_SITE_CONFIG, ...parsed, flyerImageUrl: parsed.flyerImageUrl || INITIAL_SITE_CONFIG.flyerImageUrl };
+        return { 
+          ...INITIAL_SITE_CONFIG, 
+          ...parsed, 
+          flyerImageUrl: sanitizeRelativeAsset(parsed.flyerImageUrl || INITIAL_SITE_CONFIG.flyerImageUrl) 
+        };
       }
       return INITIAL_SITE_CONFIG;
     } catch {

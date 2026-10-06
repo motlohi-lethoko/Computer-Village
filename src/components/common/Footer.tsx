@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="h-12 w-auto bg-white rounded-lg p-1 flex items-center justify-center shadow-xs">
                 <img
-                  src="/assets/images/computer_village_logo.jpg"
+                  src="./assets/images/computer_village_logo.jpg"
                   alt="Computer Village Logo"
                   className="h-10 w-auto object-contain"
                   referrerPolicy="no-referrer"

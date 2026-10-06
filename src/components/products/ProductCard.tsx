@@ -95,7 +95,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenEdit })
           }`}
           onError={(e) => {
             const target = e.currentTarget;
-            target.src = '/assets/images/laptops_showcase_row_1790265301779.jpg';
+            target.src = './assets/images/laptops_showcase_row_1790265301779.jpg';
           }}
         />
 

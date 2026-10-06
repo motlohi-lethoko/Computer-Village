@@ -16,7 +16,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     return (
       <div className={`flex items-center ${className}`}>
         <img
-          src="/assets/images/computer_village_logo.jpg"
+          src="./assets/images/computer_village_logo.jpg"
           alt="Computer Village - Empowering Your Digital World"
           className={`${heightClass} w-auto object-contain transition-transform duration-200 group-hover:scale-102`}
           referrerPolicy="no-referrer"
